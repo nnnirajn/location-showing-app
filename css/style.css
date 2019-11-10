@@ -1,0 +1,282 @@
+/*===============
+Bacic css Start
+=================*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    background: #ffa7a7;
+}
+/*===============
+Bacic css End
+=================*/
+/*===============
+app css start
+=================*/
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .app {
+    width: 380px;
+    max-width: 100%;
+    height: 600px;
+    position: relative;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 60px 0px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.search-bar-wrapper{
+    position: relative;
+}
+
+#search-bar{
+    position: absolute;
+    width: 80%;
+    top: 35px;
+    left: 15px;
+    padding: 4px 32px;
+    border: none;
+    font-size: 17px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.search-bar-wrapper span:first-of-type{
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 42px;
+    left: 27px;
+    font-size: 11px;
+}
+
+.search-bar-wrapper span:last-of-type{
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 39px;
+    right: 9px;
+    font-size: 15px;
+}
+
+.search-result-wrapper h2{
+    margin: 90px auto 10px auto;
+    background: #ff341b;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 80%;
+    font-weight: 100;
+}
+
+.search-result-wrapper span{
+    font-weight: 700;
+}
+
+.user-location{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff341b;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    top: 0;
+    margin-top: 225px;
+    margin-left: 86px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2), 0 0 0 10px rgba(255, 52, 27, 0.2), 0 0 0 20px rgba(255, 52, 27, 0.1);
+    -webkit-animation: ripple 0.7s linear infinite;
+    animation: ripple 0.7s linear infinite;
+}
+
+.marker-box {
+  position: absolute;
+  top: 0;
+  margin-top: 270px;
+  margin-left: 250px;
+}
+
+div.marker {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #ff341b;
+  overflow: hidden;
+  top: 0;
+  border-radius: 100% 100% 100% 2%;
+  transform: rotate(-45deg);
+  z-index: 1;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+div.marker img {
+  position: absolute;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-top: 12.5%;
+  transform: rotate(45deg);
+  border-radius: 100%;
+}
+
+div.marker:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  left: 15%;
+  transform: rotate(65deg);
+  filter: blur(1px);
+  z-index: 1;
+}
+
+div.marker:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.1);
+  bottom: -5px;
+  left: -5px;
+  filter: blur(4px);
+}
+
+.marker-radar {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-left: 39px;
+  margin-top: 14px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(255, 52, 27, 0.4), 0 0 0 30px rgba(255, 52, 27, 0.3), 0 0 0 45px rgba(255, 52, 27, 0.2), 0 0 0 60px rgba(255, 52, 27, 0.1);
+  border-radius: 100%;
+  -webkit-animation: ripple 0.7s linear infinite;
+          animation: ripple 0.7s linear infinite;
+}
+
+.user-info{
+    position: relative;
+    top: 310px;
+    width: 85%;
+    height: 120px;
+    background: #ff341b;
+    margin: 0 auto;
+    box-shadow: 315px 0 0 -15px rgba(255, 52, 27, 0.31), -315px 0 0 -15px rgba(255, 52, 27, 0.31), 0 22px 0 -15px rgba(255, 52, 27, 0.3), 0 40px 0 -25px rgba(255, 52, 27, 0.2), inset 0 0 55px rgba(255, 255, 255, 0.1), inset 0 0 55px rgba(0, 0, 0, 0.2);
+    
+}
+
+.left-box h2{
+    font-size: 21px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0px;
+    margin-top: 6px;
+}
+
+.left-box p:first-of-type{
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.left-box p:last-of-type{
+    font-size: 10px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 0px;
+}
+
+.meet a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background: #2f2f2f;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    box-shadow: 0 18px 20px -10px rgba(0, 0, 0, 0.4);
+}
+
+.meet p{
+    font-size: 10px;
+    padding: 4px 0px 0px 0px;
+    margin-bottom: 2px;
+}
+
+.meet h2{
+    font-size: 21px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+@-webkit-keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(243, 94, 61, 0.3),
+                0 0 0 10px rgba(243, 94, 61, 0.3), 
+                0 0 0 15px rgba(243, 94, 61, 0.3),
+                0 0 0 20px rgba(243, 94, 61, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(243, 94, 61, 0.3), 
+                0 0 0 15px rgba(243, 94, 61, 0.3), 
+                0 0 0 20px rgba(243, 94, 61, 0.3), 
+                0 0 0 25px rgba(243, 94, 61, 0);
+  }
+    
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(243, 94, 61, 0.3),
+                0 0 0 10px rgba(243, 94, 61, 0.3), 
+                0 0 0 15px rgba(243, 94, 61, 0.3),
+                0 0 0 20px rgba(243, 94, 61, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(243, 94, 61, 0.3), 
+                0 0 0 15px rgba(243, 94, 61, 0.3), 
+                0 0 0 20px rgba(243, 94, 61, 0.3), 
+                0 0 0 25px rgba(243, 94, 61, 0);
+  }
+}
+
+@media screen and (max-width: 460px){
+    .main-container{
+    padding: 0px;
+}
+     
+.main-container .app{   
+    margin: 0px 0px;
+}    
+    
+}
+
+
+
+/*===============
+app css End
+=================*/
+
+
+
+
